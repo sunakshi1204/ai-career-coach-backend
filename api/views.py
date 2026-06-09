@@ -216,8 +216,12 @@ def start_interview_flow(request, field_id, category_id):
         if category.name.lower() == "dsa":
             questions = questions.filter(is_coding=True)
 
-        if questions.exists():
-            q = random.choice(questions)
+        # if questions.exists():
+        #     q = random.choice(questions)
+        if not questions:
+           return Response({"error": "No questions found"}, status=404)
+
+        q = random.choice(questions)
 
         interview_questions.append({
             "question_id": q.id,
@@ -370,7 +374,12 @@ def get_next_question(request):
 
     # if not category:
     #     return Response({"error": f"Category not found: {current_step.category_name}"})
-    category = Category.objects.filter(id=category_id).first()
+    # category = Category.objects.filter(id=category_id).first()
+    category = Category.objects.filter(
+    field_id=field_id,
+    id=category_id
+).first()
+    
 
     if not category:
        return Response({"error": f"Category not found"}, status=404)
