@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-n%u=)zhnkvlur%tc*@&u8r02&s2qjo*+#!m-w)d_@0khddpsxi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ai-career-coach-backend-ye2g.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -138,3 +139,8 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'sunakshithakur111@gmail.com'
 EMAIL_HOST_PASSWORD = 'xjid mwjh yjfn uezk'
+
+
+
+STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
