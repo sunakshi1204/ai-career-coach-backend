@@ -1,0 +1,2438 @@
+[
+{
+  "model": "api.question",
+  "pk": 31,
+  "fields": {
+    "category": 2,
+    "text": "What is HTML?",
+    "topic": 8,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 32,
+  "fields": {
+    "category": 2,
+    "text": "Create login form (code).",
+    "topic": 8,
+    "difficulty": "Easy",
+    "is_coding": true,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 33,
+  "fields": {
+    "category": 2,
+    "text": "Difference between div and span.",
+    "topic": 8,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 34,
+  "fields": {
+    "category": 2,
+    "text": "HTML page structure.",
+    "topic": 8,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 35,
+  "fields": {
+    "category": 2,
+    "text": "What is semantic HTML?",
+    "topic": 8,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 36,
+  "fields": {
+    "category": 2,
+    "text": "Create table in HTML.",
+    "topic": 8,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 37,
+  "fields": {
+    "category": 2,
+    "text": "Form tag usage.",
+    "topic": 8,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 38,
+  "fields": {
+    "category": 2,
+    "text": "HTML vs HTML5?",
+    "topic": 8,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 39,
+  "fields": {
+    "category": 2,
+    "text": "Navigation bar creation.",
+    "topic": 8,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 40,
+  "fields": {
+    "category": 2,
+    "text": "Important HTML tags?",
+    "topic": 8,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 41,
+  "fields": {
+    "category": 6,
+    "text": "What is loop in Python?",
+    "topic": 20,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 42,
+  "fields": {
+    "category": 6,
+    "text": "Fibonacci series (coding).",
+    "topic": 20,
+    "difficulty": "Easy",
+    "is_coding": true,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 43,
+  "fields": {
+    "category": 6,
+    "text": "Factorial program.",
+    "topic": 20,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 44,
+  "fields": {
+    "category": 6,
+    "text": "Prime number check.",
+    "topic": 20,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 45,
+  "fields": {
+    "category": 6,
+    "text": "Reverse number program.",
+    "topic": 20,
+    "difficulty": "Easy",
+    "is_coding": true,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 46,
+  "fields": {
+    "category": 6,
+    "text": "Nested loops example.",
+    "topic": 20,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 47,
+  "fields": {
+    "category": 6,
+    "text": "Break vs continue?",
+    "topic": 20,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 48,
+  "fields": {
+    "category": 6,
+    "text": "Pattern printing.",
+    "topic": 20,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 49,
+  "fields": {
+    "category": 6,
+    "text": "For vs while loop?",
+    "topic": 20,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 50,
+  "fields": {
+    "category": 6,
+    "text": "Loop optimization?",
+    "topic": 20,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 56,
+  "fields": {
+    "category": 1,
+    "text": "Check if a string is palindrome",
+    "topic": 42,
+    "difficulty": "Easy",
+    "is_coding": true,
+    "input_example": "madam",
+    "expected_output": "True",
+    "constraints": "n <= 10^5"
+  }
+},
+{
+  "model": "api.question",
+  "pk": 57,
+  "fields": {
+    "category": 1,
+    "text": "Reverse a string",
+    "topic": 42,
+    "difficulty": "Easy",
+    "is_coding": true,
+    "input_example": "hello",
+    "expected_output": "olleh",
+    "constraints": "n <= 10^5"
+  }
+},
+{
+  "model": "api.question",
+  "pk": 58,
+  "fields": {
+    "category": 1,
+    "text": "Reverse linked list",
+    "topic": 2,
+    "difficulty": "Easy",
+    "is_coding": true,
+    "input_example": "1->2->3->4",
+    "expected_output": "4->3->2->1",
+    "constraints": "n <= 10^5"
+  }
+},
+{
+  "model": "api.question",
+  "pk": 59,
+  "fields": {
+    "category": 1,
+    "text": "Implement merge sort",
+    "topic": 6,
+    "difficulty": "Easy",
+    "is_coding": true,
+    "input_example": "[5,2,3,1]",
+    "expected_output": "[1,2,3,5]",
+    "constraints": "O(n log n)"
+  }
+},
+{
+  "model": "api.question",
+  "pk": 60,
+  "fields": {
+    "category": 3,
+    "text": "What is REST API?",
+    "topic": 43,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 61,
+  "fields": {
+    "category": 3,
+    "text": "Difference between GET and POST.",
+    "topic": 43,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 62,
+  "fields": {
+    "category": 3,
+    "text": "What is JWT Authentication?",
+    "topic": 43,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 63,
+  "fields": {
+    "category": 3,
+    "text": "Session vs Cookies.",
+    "topic": 43,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 64,
+  "fields": {
+    "category": 3,
+    "text": "What is Middleware?",
+    "topic": 43,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 65,
+  "fields": {
+    "category": 3,
+    "text": "What is ORM?",
+    "topic": 43,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 66,
+  "fields": {
+    "category": 3,
+    "text": "What is API Rate Limiting?",
+    "topic": 43,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 67,
+  "fields": {
+    "category": 3,
+    "text": "What is Microservices Architecture?",
+    "topic": 43,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 68,
+  "fields": {
+    "category": 3,
+    "text": "Explain HTTP Status Codes.",
+    "topic": 43,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 69,
+  "fields": {
+    "category": 3,
+    "text": "What is Caching?",
+    "topic": 43,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 70,
+  "fields": {
+    "category": 4,
+    "text": "What is DBMS?",
+    "topic": 44,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 71,
+  "fields": {
+    "category": 4,
+    "text": "Primary Key vs Foreign Key.",
+    "topic": 44,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 72,
+  "fields": {
+    "category": 4,
+    "text": "What is Normalization?",
+    "topic": 44,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 73,
+  "fields": {
+    "category": 4,
+    "text": "Explain 1NF, 2NF, 3NF.",
+    "topic": 44,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 74,
+  "fields": {
+    "category": 4,
+    "text": "Types of Joins in SQL.",
+    "topic": 44,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 75,
+  "fields": {
+    "category": 4,
+    "text": "What is Indexing?",
+    "topic": 44,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 76,
+  "fields": {
+    "category": 4,
+    "text": "What are ACID Properties?",
+    "topic": 44,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 77,
+  "fields": {
+    "category": 4,
+    "text": "Difference between SQL and NoSQL.",
+    "topic": 44,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 78,
+  "fields": {
+    "category": 4,
+    "text": "What is a Transaction?",
+    "topic": 44,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 79,
+  "fields": {
+    "category": 4,
+    "text": "Write a query to find duplicate records.",
+    "topic": 44,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 80,
+  "fields": {
+    "category": 5,
+    "text": "What is an Operating System?",
+    "topic": 45,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 81,
+  "fields": {
+    "category": 5,
+    "text": "Process vs Thread.",
+    "topic": 45,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 82,
+  "fields": {
+    "category": 5,
+    "text": "What is Deadlock?",
+    "topic": 45,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 83,
+  "fields": {
+    "category": 5,
+    "text": "What is Context Switching?",
+    "topic": 45,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 84,
+  "fields": {
+    "category": 5,
+    "text": "Explain Virtual Memory.",
+    "topic": 45,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 85,
+  "fields": {
+    "category": 5,
+    "text": "What is Paging?",
+    "topic": 45,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 86,
+  "fields": {
+    "category": 5,
+    "text": "What is Scheduling?",
+    "topic": 45,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 87,
+  "fields": {
+    "category": 5,
+    "text": "First Come First Serve (FCFS) Algorithm.",
+    "topic": 45,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 88,
+  "fields": {
+    "category": 5,
+    "text": "What is Semaphore?",
+    "topic": 45,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 89,
+  "fields": {
+    "category": 5,
+    "text": "What is Multithreading?",
+    "topic": 45,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 90,
+  "fields": {
+    "category": 9,
+    "text": "What is Data Analysis?",
+    "topic": 46,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 91,
+  "fields": {
+    "category": 9,
+    "text": "Steps in Data Analysis.",
+    "topic": 46,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 92,
+  "fields": {
+    "category": 9,
+    "text": "What is Data Cleaning?",
+    "topic": 46,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 93,
+  "fields": {
+    "category": 9,
+    "text": "Mean vs Median vs Mode.",
+    "topic": 46,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 94,
+  "fields": {
+    "category": 9,
+    "text": "What is Correlation?",
+    "topic": 46,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 95,
+  "fields": {
+    "category": 9,
+    "text": "What is Outlier Detection?",
+    "topic": 46,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 96,
+  "fields": {
+    "category": 9,
+    "text": "Explain Data Visualization.",
+    "topic": 46,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 97,
+  "fields": {
+    "category": 9,
+    "text": "What is EDA (Exploratory Data Analysis)?",
+    "topic": 46,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 98,
+  "fields": {
+    "category": 9,
+    "text": "Difference between Structured and Unstructured Data.",
+    "topic": 46,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 99,
+  "fields": {
+    "category": 9,
+    "text": "What is Missing Data Handling?",
+    "topic": 46,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 100,
+  "fields": {
+    "category": 8,
+    "text": "What is Probability?",
+    "topic": 47,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 101,
+  "fields": {
+    "category": 8,
+    "text": "Mean, Median, Mode.",
+    "topic": 47,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 102,
+  "fields": {
+    "category": 8,
+    "text": "Standard Deviation.",
+    "topic": 47,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 103,
+  "fields": {
+    "category": 8,
+    "text": "Variance vs Standard Deviation.",
+    "topic": 47,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 104,
+  "fields": {
+    "category": 8,
+    "text": "What is Hypothesis Testing?",
+    "topic": 47,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 105,
+  "fields": {
+    "category": 8,
+    "text": "What is Normal Distribution?",
+    "topic": 47,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 106,
+  "fields": {
+    "category": 8,
+    "text": "What is P-Value?",
+    "topic": 47,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 107,
+  "fields": {
+    "category": 8,
+    "text": "What is Sampling?",
+    "topic": 47,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 108,
+  "fields": {
+    "category": 8,
+    "text": "Population vs Sample.",
+    "topic": 47,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 109,
+  "fields": {
+    "category": 8,
+    "text": "Correlation vs Causation.",
+    "topic": 47,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 110,
+  "fields": {
+    "category": 7,
+    "text": "What is Machine Learning?",
+    "topic": 48,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 111,
+  "fields": {
+    "category": 7,
+    "text": "Supervised vs Unsupervised Learning.",
+    "topic": 48,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 112,
+  "fields": {
+    "category": 7,
+    "text": "What is Overfitting?",
+    "topic": 48,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 113,
+  "fields": {
+    "category": 7,
+    "text": "What is Underfitting?",
+    "topic": 48,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 114,
+  "fields": {
+    "category": 7,
+    "text": "What is Cross Validation?",
+    "topic": 48,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 115,
+  "fields": {
+    "category": 7,
+    "text": "Explain Decision Trees.",
+    "topic": 48,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 116,
+  "fields": {
+    "category": 7,
+    "text": "What is Random Forest?",
+    "topic": 48,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 117,
+  "fields": {
+    "category": 7,
+    "text": "What is Feature Engineering?",
+    "topic": 48,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 118,
+  "fields": {
+    "category": 7,
+    "text": "What is Model Evaluation?",
+    "topic": 48,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 119,
+  "fields": {
+    "category": 7,
+    "text": "Precision vs Recall.",
+    "topic": 48,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 120,
+  "fields": {
+    "category": 31,
+    "text": "What is Classification?",
+    "topic": 49,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 121,
+  "fields": {
+    "category": 31,
+    "text": "Logistic Regression.",
+    "topic": 49,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 122,
+  "fields": {
+    "category": 31,
+    "text": "Binary vs Multi-Class Classification.",
+    "topic": 49,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 123,
+  "fields": {
+    "category": 31,
+    "text": "Confusion Matrix.",
+    "topic": 49,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 124,
+  "fields": {
+    "category": 31,
+    "text": "Accuracy vs Precision.",
+    "topic": 49,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 125,
+  "fields": {
+    "category": 31,
+    "text": "What is ROC Curve?",
+    "topic": 49,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 126,
+  "fields": {
+    "category": 31,
+    "text": "What is F1 Score?",
+    "topic": 49,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 127,
+  "fields": {
+    "category": 31,
+    "text": "K-Nearest Neighbors.",
+    "topic": 49,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 128,
+  "fields": {
+    "category": 31,
+    "text": "Naive Bayes Classifier.",
+    "topic": 49,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 129,
+  "fields": {
+    "category": 31,
+    "text": "Classification Use Cases.",
+    "topic": 49,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 130,
+  "fields": {
+    "category": 30,
+    "text": "What is Regression?",
+    "topic": 50,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 131,
+  "fields": {
+    "category": 30,
+    "text": "Linear Regression.",
+    "topic": 50,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 132,
+  "fields": {
+    "category": 30,
+    "text": "Multiple Linear Regression.",
+    "topic": 50,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 133,
+  "fields": {
+    "category": 30,
+    "text": "Mean Squared Error.",
+    "topic": 50,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 134,
+  "fields": {
+    "category": 30,
+    "text": "R-Squared Value.",
+    "topic": 50,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 135,
+  "fields": {
+    "category": 30,
+    "text": "Gradient Descent.",
+    "topic": 50,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 136,
+  "fields": {
+    "category": 30,
+    "text": "What is Polynomial Regression?",
+    "topic": 50,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 137,
+  "fields": {
+    "category": 30,
+    "text": "Assumptions of Linear Regression.",
+    "topic": 50,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 138,
+  "fields": {
+    "category": 30,
+    "text": "Regression Use Cases.",
+    "topic": 50,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 139,
+  "fields": {
+    "category": 30,
+    "text": "Overfitting in Regression.",
+    "topic": 50,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 140,
+  "fields": {
+    "category": 32,
+    "text": "What is a Neural Network?",
+    "topic": 51,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 141,
+  "fields": {
+    "category": 32,
+    "text": "What is a Neuron?",
+    "topic": 51,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 142,
+  "fields": {
+    "category": 32,
+    "text": "Activation Functions.",
+    "topic": 51,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 143,
+  "fields": {
+    "category": 32,
+    "text": "What is Backpropagation?",
+    "topic": 51,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 144,
+  "fields": {
+    "category": 32,
+    "text": "What is Gradient Descent?",
+    "topic": 51,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 145,
+  "fields": {
+    "category": 32,
+    "text": "Feed Forward Network.",
+    "topic": 51,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 146,
+  "fields": {
+    "category": 32,
+    "text": "What is Epoch?",
+    "topic": 51,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 147,
+  "fields": {
+    "category": 32,
+    "text": "What are Weights and Biases?",
+    "topic": 51,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 148,
+  "fields": {
+    "category": 32,
+    "text": "Vanishing Gradient Problem.",
+    "topic": 51,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 149,
+  "fields": {
+    "category": 32,
+    "text": "Applications of Neural Networks.",
+    "topic": 51,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 150,
+  "fields": {
+    "category": 33,
+    "text": "What is Deep Learning?",
+    "topic": 52,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 151,
+  "fields": {
+    "category": 33,
+    "text": "CNN vs RNN.",
+    "topic": 52,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 152,
+  "fields": {
+    "category": 33,
+    "text": "What is Convolution?",
+    "topic": 52,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 153,
+  "fields": {
+    "category": 33,
+    "text": "What is Pooling?",
+    "topic": 52,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 154,
+  "fields": {
+    "category": 33,
+    "text": "What is Transfer Learning?",
+    "topic": 52,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 155,
+  "fields": {
+    "category": 33,
+    "text": "What is LSTM?",
+    "topic": 52,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 156,
+  "fields": {
+    "category": 33,
+    "text": "What is GPU Training?",
+    "topic": 52,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 157,
+  "fields": {
+    "category": 33,
+    "text": "What is Batch Normalization?",
+    "topic": 52,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 158,
+  "fields": {
+    "category": 33,
+    "text": "What is Dropout?",
+    "topic": 52,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 159,
+  "fields": {
+    "category": 33,
+    "text": "Applications of Deep Learning.",
+    "topic": 52,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 160,
+  "fields": {
+    "category": 26,
+    "text": "What is IP Address?",
+    "topic": 53,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 161,
+  "fields": {
+    "category": 26,
+    "text": "TCP vs UDP.",
+    "topic": 53,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 162,
+  "fields": {
+    "category": 26,
+    "text": "What is DNS?",
+    "topic": 53,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 163,
+  "fields": {
+    "category": 26,
+    "text": "What is HTTP and HTTPS?",
+    "topic": 53,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 164,
+  "fields": {
+    "category": 26,
+    "text": "What is a Firewall?",
+    "topic": 53,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 165,
+  "fields": {
+    "category": 26,
+    "text": "What is a Router?",
+    "topic": 53,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 166,
+  "fields": {
+    "category": 26,
+    "text": "What is a Switch?",
+    "topic": 53,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 167,
+  "fields": {
+    "category": 26,
+    "text": "What is VPN?",
+    "topic": 53,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 168,
+  "fields": {
+    "category": 26,
+    "text": "What is Network Topology?",
+    "topic": 53,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 169,
+  "fields": {
+    "category": 26,
+    "text": "What is Port Number?",
+    "topic": 53,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 170,
+  "fields": {
+    "category": 27,
+    "text": "What is Ethical Hacking?",
+    "topic": 54,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 171,
+  "fields": {
+    "category": 27,
+    "text": "What is Penetration Testing?",
+    "topic": 54,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 172,
+  "fields": {
+    "category": 27,
+    "text": "SQL Injection.",
+    "topic": 54,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 173,
+  "fields": {
+    "category": 27,
+    "text": "Cross Site Scripting (XSS).",
+    "topic": 54,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 174,
+  "fields": {
+    "category": 27,
+    "text": "What is Vulnerability Assessment?",
+    "topic": 54,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 175,
+  "fields": {
+    "category": 27,
+    "text": "What is Kali Linux?",
+    "topic": 54,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 176,
+  "fields": {
+    "category": 27,
+    "text": "What is Social Engineering?",
+    "topic": 54,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 177,
+  "fields": {
+    "category": 27,
+    "text": "What is Brute Force Attack?",
+    "topic": 54,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 178,
+  "fields": {
+    "category": 27,
+    "text": "What is Phishing?",
+    "topic": 54,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 179,
+  "fields": {
+    "category": 27,
+    "text": "What is OWASP?",
+    "topic": 54,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 180,
+  "fields": {
+    "category": 28,
+    "text": "What is Cryptography?",
+    "topic": 55,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 181,
+  "fields": {
+    "category": 28,
+    "text": "Symmetric vs Asymmetric Encryption.",
+    "topic": 55,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 182,
+  "fields": {
+    "category": 28,
+    "text": "What is RSA?",
+    "topic": 55,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 183,
+  "fields": {
+    "category": 28,
+    "text": "What is AES?",
+    "topic": 55,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 184,
+  "fields": {
+    "category": 28,
+    "text": "What is Hashing?",
+    "topic": 55,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 185,
+  "fields": {
+    "category": 28,
+    "text": "MD5 vs SHA.",
+    "topic": 55,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 186,
+  "fields": {
+    "category": 28,
+    "text": "Digital Signature.",
+    "topic": 55,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 187,
+  "fields": {
+    "category": 28,
+    "text": "Public Key Infrastructure.",
+    "topic": 55,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 188,
+  "fields": {
+    "category": 28,
+    "text": "What is SSL/TLS?",
+    "topic": 55,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 189,
+  "fields": {
+    "category": 28,
+    "text": "What is Key Exchange?",
+    "topic": 55,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 190,
+  "fields": {
+    "category": 29,
+    "text": "What is Cyber Law?",
+    "topic": 56,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 191,
+  "fields": {
+    "category": 29,
+    "text": "IT Act 2000.",
+    "topic": 56,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 192,
+  "fields": {
+    "category": 29,
+    "text": "What is Cyber Crime?",
+    "topic": 56,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 193,
+  "fields": {
+    "category": 29,
+    "text": "Data Privacy Laws.",
+    "topic": 56,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 194,
+  "fields": {
+    "category": 29,
+    "text": "What is GDPR?",
+    "topic": 56,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 195,
+  "fields": {
+    "category": 29,
+    "text": "What is Digital Evidence?",
+    "topic": 56,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 196,
+  "fields": {
+    "category": 29,
+    "text": "What is Cyber Bullying?",
+    "topic": 56,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 197,
+  "fields": {
+    "category": 29,
+    "text": "What is Identity Theft?",
+    "topic": 56,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 198,
+  "fields": {
+    "category": 29,
+    "text": "What is Intellectual Property in Cyber Space?",
+    "topic": 56,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 199,
+  "fields": {
+    "category": 29,
+    "text": "What are Data Protection Regulations?",
+    "topic": 56,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 200,
+  "fields": {
+    "category": 24,
+    "text": "What is HR Management?",
+    "topic": 57,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 201,
+  "fields": {
+    "category": 24,
+    "text": "Recruitment Process.",
+    "topic": 57,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 202,
+  "fields": {
+    "category": 24,
+    "text": "What is Employee Engagement?",
+    "topic": 57,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 203,
+  "fields": {
+    "category": 24,
+    "text": "What is Performance Appraisal?",
+    "topic": 57,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 204,
+  "fields": {
+    "category": 24,
+    "text": "What is Payroll Management?",
+    "topic": 57,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 205,
+  "fields": {
+    "category": 24,
+    "text": "What is Conflict Resolution?",
+    "topic": 57,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 206,
+  "fields": {
+    "category": 24,
+    "text": "Leadership vs Management.",
+    "topic": 57,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 207,
+  "fields": {
+    "category": 24,
+    "text": "What is Talent Acquisition?",
+    "topic": 57,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 208,
+  "fields": {
+    "category": 24,
+    "text": "What is HR Analytics?",
+    "topic": 57,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+},
+{
+  "model": "api.question",
+  "pk": 209,
+  "fields": {
+    "category": 24,
+    "text": "What is Organizational Behavior?",
+    "topic": 57,
+    "difficulty": "Easy",
+    "is_coding": false,
+    "input_example": null,
+    "expected_output": null,
+    "constraints": null
+  }
+}
+]

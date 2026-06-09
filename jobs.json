@@ -1,0 +1,288 @@
+[
+{
+  "model": "api.job",
+  "pk": 1,
+  "fields": {
+    "title": "Python Developer",
+    "description": "Looking for backend developer",
+    "required_skills": [
+      "python",
+      "django",
+      "api"
+    ],
+    "experience_level": "junior",
+    "salary_min": 30000,
+    "salary_max": 60000,
+    "location": "Remote",
+    "is_remote": true,
+    "company": "TechCorp",
+    "experience_min": 0,
+    "experience_max": 2,
+    "job_type": "full_time",
+    "posted_at": "2026-04-29T04:37:18.506Z",
+    "deadline": null,
+    "views": 0
+  }
+},
+{
+  "model": "api.job",
+  "pk": 2,
+  "fields": {
+    "title": "Frontend Developer",
+    "description": "React developer needed",
+    "required_skills": [
+      "react",
+      "javascript",
+      "html"
+    ],
+    "experience_level": "junior",
+    "salary_min": 25000,
+    "salary_max": 50000,
+    "location": "Delhi",
+    "is_remote": false,
+    "company": "WebWorks",
+    "experience_min": 0,
+    "experience_max": 1,
+    "job_type": "internship",
+    "posted_at": "2026-04-29T04:37:33.283Z",
+    "deadline": null,
+    "views": 0
+  }
+},
+{
+  "model": "api.job",
+  "pk": 3,
+  "fields": {
+    "title": "Full Stack Developer",
+    "description": "Work on MERN stack",
+    "required_skills": [
+      "mongodb",
+      "express",
+      "react",
+      "node"
+    ],
+    "experience_level": "mid",
+    "salary_min": 50000,
+    "salary_max": 90000,
+    "location": "Bangalore",
+    "is_remote": true,
+    "company": "StartupX",
+    "experience_min": 1,
+    "experience_max": 3,
+    "job_type": "full_time",
+    "posted_at": "2026-04-29T04:37:33.770Z",
+    "deadline": null,
+    "views": 0
+  }
+},
+{
+  "model": "api.job",
+  "pk": 4,
+  "fields": {
+    "title": "Frontend Developer",
+    "description": "We need a skilled Frontend Developer with React experience.",
+    "required_skills": "React, JavaScript, CSS, HTML",
+    "experience_level": "Mid",
+    "salary_min": 50000,
+    "salary_max": 80000,
+    "location": "Delhi, India",
+    "is_remote": true,
+    "company": "Google",
+    "experience_min": 2,
+    "experience_max": 5,
+    "job_type": "Full Time",
+    "posted_at": "2026-06-09T04:25:56.943Z",
+    "deadline": "2026-07-09T04:25:56.898Z",
+    "views": 0
+  }
+},
+{
+  "model": "api.job",
+  "pk": 5,
+  "fields": {
+    "title": "Backend Developer",
+    "description": "Looking for a Django/Python Backend Developer.",
+    "required_skills": "Python, Django, REST API, PostgreSQL",
+    "experience_level": "Senior",
+    "salary_min": 80000,
+    "salary_max": 120000,
+    "location": "Mumbai, India",
+    "is_remote": false,
+    "company": "Amazon",
+    "experience_min": 4,
+    "experience_max": 8,
+    "job_type": "Full Time",
+    "posted_at": "2026-06-09T04:25:56.957Z",
+    "deadline": "2026-07-24T04:25:56.898Z",
+    "views": 0
+  }
+},
+{
+  "model": "api.job",
+  "pk": 6,
+  "fields": {
+    "title": "Data Scientist",
+    "description": "AI/ML Data Scientist needed for our research team.",
+    "required_skills": "Python, Machine Learning, TensorFlow, Pandas",
+    "experience_level": "Senior",
+    "salary_min": 100000,
+    "salary_max": 150000,
+    "location": "Bangalore, India",
+    "is_remote": true,
+    "company": "Microsoft",
+    "experience_min": 3,
+    "experience_max": 7,
+    "job_type": "Full Time",
+    "posted_at": "2026-06-09T04:25:56.963Z",
+    "deadline": "2026-08-08T04:25:56.898Z",
+    "views": 0
+  }
+},
+{
+  "model": "api.job",
+  "pk": 7,
+  "fields": {
+    "title": "UI/UX Designer",
+    "description": "Creative UI/UX Designer for our product team.",
+    "required_skills": "Figma, Adobe XD, Prototyping, User Research",
+    "experience_level": "Junior",
+    "salary_min": 30000,
+    "salary_max": 50000,
+    "location": "Hyderabad, India",
+    "is_remote": true,
+    "company": "Flipkart",
+    "experience_min": 1,
+    "experience_max": 3,
+    "job_type": "Full Time",
+    "posted_at": "2026-06-09T04:25:56.969Z",
+    "deadline": "2026-06-29T04:25:56.898Z",
+    "views": 0
+  }
+},
+{
+  "model": "api.job",
+  "pk": 8,
+  "fields": {
+    "title": "DevOps Engineer",
+    "description": "DevOps Engineer with AWS and Docker experience.",
+    "required_skills": "AWS, Docker, Kubernetes, CI/CD, Linux",
+    "experience_level": "Mid",
+    "salary_min": 70000,
+    "salary_max": 110000,
+    "location": "Pune, India",
+    "is_remote": false,
+    "company": "Infosys",
+    "experience_min": 2,
+    "experience_max": 6,
+    "job_type": "Full Time",
+    "posted_at": "2026-06-09T04:25:56.978Z",
+    "deadline": "2026-07-14T04:25:56.898Z",
+    "views": 0
+  }
+},
+{
+  "model": "api.job",
+  "pk": 9,
+  "fields": {
+    "title": "React Native Developer",
+    "description": "Mobile app developer for iOS and Android.",
+    "required_skills": "React Native, JavaScript, Redux, Firebase",
+    "experience_level": "Mid",
+    "salary_min": 60000,
+    "salary_max": 90000,
+    "location": "Chennai, India",
+    "is_remote": true,
+    "company": "Swiggy",
+    "experience_min": 2,
+    "experience_max": 5,
+    "job_type": "Full Time",
+    "posted_at": "2026-06-09T04:25:56.985Z",
+    "deadline": "2026-07-04T04:25:56.898Z",
+    "views": 0
+  }
+},
+{
+  "model": "api.job",
+  "pk": 10,
+  "fields": {
+    "title": "Machine Learning Intern",
+    "description": "ML Intern for 6 months research project.",
+    "required_skills": "Python, Scikit-learn, NumPy, Pandas",
+    "experience_level": "Fresher",
+    "salary_min": 15000,
+    "salary_max": 25000,
+    "location": "Bangalore, India",
+    "is_remote": true,
+    "company": "Ola",
+    "experience_min": 0,
+    "experience_max": 1,
+    "job_type": "Internship",
+    "posted_at": "2026-06-09T04:25:56.993Z",
+    "deadline": "2026-06-24T04:25:56.898Z",
+    "views": 0
+  }
+},
+{
+  "model": "api.job",
+  "pk": 11,
+  "fields": {
+    "title": "Full Stack Developer",
+    "description": "Full Stack Developer with MERN stack experience.",
+    "required_skills": "MongoDB, Express, React, Node.js",
+    "experience_level": "Mid",
+    "salary_min": 65000,
+    "salary_max": 95000,
+    "location": "Noida, India",
+    "is_remote": false,
+    "company": "Paytm",
+    "experience_min": 2,
+    "experience_max": 5,
+    "job_type": "Full Time",
+    "posted_at": "2026-06-09T04:25:57.002Z",
+    "deadline": "2026-07-19T04:25:56.898Z",
+    "views": 0
+  }
+},
+{
+  "model": "api.job",
+  "pk": 12,
+  "fields": {
+    "title": "Cybersecurity Analyst",
+    "description": "Security analyst to protect our infrastructure.",
+    "required_skills": "Network Security, Ethical Hacking, SIEM, Firewalls",
+    "experience_level": "Senior",
+    "salary_min": 90000,
+    "salary_max": 130000,
+    "location": "Delhi, India",
+    "is_remote": false,
+    "company": "TCS",
+    "experience_min": 4,
+    "experience_max": 9,
+    "job_type": "Full Time",
+    "posted_at": "2026-06-09T04:25:57.013Z",
+    "deadline": "2026-07-29T04:25:56.898Z",
+    "views": 0
+  }
+},
+{
+  "model": "api.job",
+  "pk": 13,
+  "fields": {
+    "title": "Android Developer",
+    "description": "Android Developer for our e-commerce app.",
+    "required_skills": "Kotlin, Android SDK, Jetpack Compose, Firebase",
+    "experience_level": "Junior",
+    "salary_min": 40000,
+    "salary_max": 65000,
+    "location": "Kolkata, India",
+    "is_remote": true,
+    "company": "Meesho",
+    "experience_min": 1,
+    "experience_max": 3,
+    "job_type": "Full Time",
+    "posted_at": "2026-06-09T04:25:57.022Z",
+    "deadline": "2026-07-09T04:25:56.898Z",
+    "views": 0
+  }
+}
+]
