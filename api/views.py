@@ -376,8 +376,8 @@ def get_next_question(request):
     #     return Response({"error": f"Category not found: {current_step.category_name}"})
     # category = Category.objects.filter(id=category_id).first()
     category = Category.objects.filter(
-    field_id=field_id,
-    id=category_id
+       field_id=field_id,
+    name__iexact=current_step.category_name
 ).first()
     
 
