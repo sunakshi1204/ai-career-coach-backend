@@ -10,6 +10,8 @@ from isort import file
 from .models import Job
 
 from .utils.compiler import run_python, run_java, run_cpp, run_c, run_node, run_html, run_css
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.decorators import api_view, permission_classes
 
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -562,7 +564,10 @@ def report(request, session_id):
 
 
 # ================== PROFILE ==================
+# Ab
+
 @api_view(['GET'])
+@permission_classes([IsAuthenticated])
 def get_profile(request):
     user = request.user
     return Response({
@@ -572,13 +577,12 @@ def get_profile(request):
 
 
 @api_view(['POST'])
+@permission_classes([IsAuthenticated])
 def update_profile(request):
     user = request.user
-
     user.username = request.data.get("name")
     user.email = request.data.get("email")
     user.save()
-
     return Response({"message": "Profile updated"})
 
 @api_view(['POST'])
