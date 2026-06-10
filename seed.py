@@ -4,7 +4,7 @@ import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
 django.setup()
 
-from api.models import Field, Category, Job, Question
+from api.models import Field, Category, Job, Question,InterviewFlow
 
 if Field.objects.count() == 0:
 
@@ -30,7 +30,105 @@ if Field.objects.count() == 0:
     Category.objects.create(name="Generative AI", field=f5)
 
     print("✅ Fields Added")
+if Category.objects.count() == 0:
+    # Software Engineering
+    Category.objects.get_or_create(name="DSA", field=f1)
+    Category.objects.get_or_create(name="Operating System", field=f1)
+    Category.objects.get_or_create(name="DBMS", field=f1)
+    Category.objects.get_or_create(name="Backend", field=f1)
+    Category.objects.get_or_create(name="Web Development", field=f1)
 
+    # Data Science
+    Category.objects.get_or_create(name="Machine Learning", field=f2)
+    Category.objects.get_or_create(name="Statistics", field=f2)
+    Category.objects.get_or_create(name="Data Analysis", field=f2)
+
+    # Management (MBA)
+    Category.objects.get_or_create(name="HR", field=f3)
+
+    # Cyber Security
+    Category.objects.get_or_create(name="Networking", field=f4)
+    Category.objects.get_or_create(name="Ethical Hacking", field=f4)
+    Category.objects.get_or_create(name="Cryptography", field=f4)
+    Category.objects.get_or_create(name="Cyber Laws", field=f4)
+
+    # AI / ML
+    Category.objects.get_or_create(name="Deep Learning", field=f5)
+    Category.objects.get_or_create(name="Neural Networks", field=f5)
+    Category.objects.get_or_create(name="Classification", field=f5)
+    Category.objects.get_or_create(name="Regression", field=f5)
+from api.models import Field, Category, Job, Question, InterviewFlow
+
+import os
+import django
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
+django.setup()
+
+from api.models import Field, Category, Job, Question, InterviewFlow
+
+# ✅ INTERVIEW FLOWS
+if InterviewFlow.objects.count() == 0:
+    
+    for field in Field.objects.all():
+        for cat in Category.objects.filter(field=field):
+            for i in range(5):
+                InterviewFlow.objects.create(
+                    field=field,
+                    category=cat,
+                    category_name=cat.name,
+                    step_order=i+1
+                )
+
+    print(" Interview Flows Added")
+else:
+    print(" Flows already exist")
+
+    # DATA SCIENCE
+    ds_field = Field.objects.get(name="Data Science")
+    for cat in Category.objects.filter(field=ds_field):
+        for i in range(5):
+            InterviewFlow.objects.create(
+                field=ds_field,
+                category=cat,
+                category_name=cat.name,
+                step_order=i+1
+            )
+
+    # MANAGEMENT (MBA)
+    mba_field = Field.objects.get(name="Management (MBA)")
+    for cat in Category.objects.filter(field=mba_field):
+        for i in range(5):
+            InterviewFlow.objects.create(
+                field=mba_field,
+                category=cat,
+                category_name=cat.name,
+                step_order=i+1
+            )
+
+    # CYBER SECURITY
+    cs_field = Field.objects.get(name="Cyber Security")
+    for cat in Category.objects.filter(field=cs_field):
+        for i in range(5):
+            InterviewFlow.objects.create(
+                field=cs_field,
+                category=cat,
+                category_name=cat.name,
+                step_order=i+1
+            )
+
+    # AI / ML
+    ai_field = Field.objects.get(name="AI / ML")
+    for cat in Category.objects.filter(field=ai_field):
+        for i in range(5):
+            InterviewFlow.objects.create(
+                field=ai_field,
+                category=cat,
+                category_name=cat.name,
+                step_order=i+1
+            )
+
+    print("✅ Interview Flows Added")
 if Job.objects.count() == 0:
 
     Job.objects.create(
