@@ -167,6 +167,11 @@ def get_categories(request):
 def run_seed(request):
     from api.models import Field, Category, InterviewFlow
 
+    # Saari extra fields delete karo
+    Field.objects.filter(id__in=[9, 10, 11]).delete()
+
+    
+
     # Duplicate fields delete karo
     for name in ["Software Engineering", "Data Science", "Management (MBA)", "Cyber Security", "AI / ML"]:
         fields = Field.objects.filter(name=name)
@@ -209,6 +214,7 @@ def run_seed(request):
                     )
 
     return Response({"message": "✅ Seed done!"})
+
 @api_view(['GET'])
 def get_topics_by_category(request, category_id):
     topics = Topic.objects.filter(category_id=category_id)
@@ -445,7 +451,7 @@ def get_next_question(request):
 
 # ================== SUBMIT ANSWER ==================
 def call_groq(prompt):
-    api_key = os.environ.get("GROQ_API_KEY", "").strip()  
+    api_key = os.environ.get("GROQ_API_KEY", "").strip()
     response = requests.post(
         "https://api.groq.com/openai/v1/chat/completions",
         headers={
@@ -458,7 +464,15 @@ def call_groq(prompt):
         },
         timeout=30
     )
-    return response.json()["choices"][0]["message"]["content"].strip()
+    data = response.json()
+    
+    # Debug ke liye
+    print("GROQ RESPONSE:", data)
+    
+    if "choices" not in data:
+        raise Exception(f"Groq error: {data.get('error', {}).get('message', str(data))}")
+    
+    return data["choices"][0]["message"]["content"].strip()
 @api_view(['POST'])
 def submit_answer(request):
 
