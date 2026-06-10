@@ -19,5 +19,89 @@
       "deadline": null,
       "views": 0
     }
+  },
+  {
+  "model": "api.job",
+  "pk": 3,
+  "fields": {
+    "title": "Full Stack Developer",
+    "description": "Work on MERN stack projects",
+    "required_skills": ["mongodb", "express", "react", "nodejs"],
+    "experience_level": "mid",
+    "salary_min": 50000,
+    "salary_max": 90000,
+    "location": "Bangalore",
+    "is_remote": true,
+    "company": "StartupX",
+    "experience_min": 1,
+    "experience_max": 3,
+    "job_type": "full_time",
+    "posted_at": "2026-06-11T00:00:00Z",
+    "deadline": null,
+    "views": 0
   }
+},
+{
+  "model": "api.job",
+  "pk": 4,
+  "fields": {
+    "title": "Backend Developer",
+    "description": "Django and REST API developer",
+    "required_skills": ["python", "django", "rest api", "postgresql"],
+    "experience_level": "senior",
+    "salary_min": 80000,
+    "salary_max": 120000,
+    "location": "Mumbai",
+    "is_remote": false,
+    "company": "Amazon",
+    "experience_min": 4,
+    "experience_max": 8,
+    "job_type": "full_time",
+    "posted_at": "2026-06-11T00:00:00Z",
+    "deadline": null,
+    "views": 0
+  }
+},
+{
+  "model": "api.job",
+  "pk": 5,
+  "fields": {
+    "title": "Data Scientist",
+    "description": "AI and ML research work",
+    "required_skills": ["python", "machine learning", "tensorflow", "pandas"],
+    "experience_level": "senior",
+    "salary_min": 100000,
+    "salary_max": 150000,
+    "location": "Bangalore",
+    "is_remote": true,
+    "company": "Microsoft",
+    "experience_min": 3,
+    "experience_max": 7,
+    "job_type": "full_time",
+    "posted_at": "2026-06-11T00:00:00Z",
+    "deadline": null,
+    "views": 0
+  }
+},
+{
+  "model": "api.job",
+  "pk": 6,
+  "fields": {
+    "title": "Machine Learning Intern",
+    "description": "ML Intern for research projects",
+    "required_skills": ["python", "numpy", "pandas", "scikit-learn"],
+    "experience_level": "fresher",
+    "salary_min": 15000,
+    "salary_max": 25000,
+    "location": "Remote",
+    "is_remote": true,
+    "company": "Ola",
+    "experience_min": 0,
+    "experience_max": 1,
+    "job_type": "internship",
+    "posted_at": "2026-06-11T00:00:00Z",
+    "deadline": null,
+    "views": 0
+  }
+}
 ]

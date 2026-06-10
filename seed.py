@@ -7,20 +7,29 @@ django.setup()
 from api.models import Field, Category, Job
 
 if Field.objects.count() == 0:
+
     f1 = Field.objects.create(name="Software Engineering")
     f2 = Field.objects.create(name="Data Science")
-    f3 = Field.objects.create(name="Web Development")
+    f3 = Field.objects.create(name="Management (MBA)")
+    f4 = Field.objects.create(name="Cyber Security")
+    f5 = Field.objects.create(name="AI / ML")
 
     Category.objects.create(name="DSA", field=f1)
     Category.objects.create(name="System Design", field=f1)
+
     Category.objects.create(name="Machine Learning", field=f2)
     Category.objects.create(name="Python", field=f2)
-    Category.objects.create(name="React", field=f3)
-    Category.objects.create(name="Django", field=f3)
 
-    print("✅ Data added!")
-else:
-    print("✅ Data already exists!")
+    Category.objects.create(name="Business Analytics", field=f3)
+    Category.objects.create(name="Marketing", field=f3)
+
+    Category.objects.create(name="Network Security", field=f4)
+    Category.objects.create(name="Ethical Hacking", field=f4)
+
+    Category.objects.create(name="Deep Learning", field=f5)
+    Category.objects.create(name="Generative AI", field=f5)
+
+    print("✅ Fields Added")
 
 if Job.objects.count() == 0:
 
