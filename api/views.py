@@ -399,7 +399,7 @@ def get_next_question(request):
 
 # ================== SUBMIT ANSWER ==================
 def call_groq(prompt):
-    api_key = os.environ.get("GROQ_API_KEY")
+    api_key = os.environ.get("GROQ_API_KEY", "").strip()  
     response = requests.post(
         "https://api.groq.com/openai/v1/chat/completions",
         headers={
