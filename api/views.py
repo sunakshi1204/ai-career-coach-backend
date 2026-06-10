@@ -398,6 +398,21 @@ def get_next_question(request):
 
 
 # ================== SUBMIT ANSWER ==================
+def call_groq(prompt):
+    api_key = os.environ.get("GROQ_API_KEY")
+    response = requests.post(
+        "https://api.groq.com/openai/v1/chat/completions",
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json"
+        },
+        json={
+            "model": "llama3-8b-8192",
+            "messages": [{"role": "user", "content": prompt}]
+        },
+        timeout=30
+    )
+    return response.json()["choices"][0]["message"]["content"].strip()
 @api_view(['POST'])
 def submit_answer(request):
 
@@ -473,13 +488,14 @@ Question: {question.text}
 Answer: {user_answer}"""
 
     try:
-        client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+        feedback = call_groq(prompt)
+        # client = Groq(api_key=os.environ.get(""))
 
-        completion = client.chat.completions.create(
-            model="llama3-8b-8192",
-            messages=[{"role": "user", "content": prompt}]
-        )
-        feedback = completion.choices[0].message.content.strip()
+        # completion = client.chat.completions.create(
+        #     model="llama3-8b-8192",
+        #     messages=[{"role": "user", "content": prompt}]
+        # )
+        # feedback = completion.choices[0].message.content.strip()
 
         score = 5
         for line in feedback.split("\n"):
