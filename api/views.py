@@ -3,6 +3,8 @@ import json
 import requests
 import random
 import re
+import os
+from groq import Groq
 from unicodedata import category
 
 from PyPDF2 import PdfReader
@@ -453,19 +455,20 @@ def submit_answer(request):
     except Question.DoesNotExist:
         return Response({"error": "Invalid question_id"}, status=404)
 
-    # 🔴 CODING QUESTION - sahi indentation
+    # 🔴 CODING QUESTION
     if question.is_coding:
         code_lines = len([l for l in user_answer.strip().split('\n') if l.strip()])
-    if user_answer.strip() == "No code submitted" or code_lines == 0:
-        score = 0
-    elif code_lines < 3:
-        score = 4
-    elif code_lines < 8:
-        score = 6
-    elif code_lines < 15:
-        score = 8
-    else:
-        score = 9
+
+        if user_answer.strip() == "No code submitted" or code_lines == 0:
+            score = 0
+        elif code_lines < 3:
+            score = 4
+        elif code_lines < 8:
+            score = 6
+        elif code_lines < 15:
+            score = 8
+        else:
+            score = 9
 
         Answer.objects.create(
             session=session,
@@ -475,7 +478,7 @@ def submit_answer(request):
         )
         return Response({"feedback": f"Code received ({code_lines} lines). Score: {score}/10"})
 
-    # ✅ THEORY QUESTIONS - yahan pahuncha hi nahi pehle
+    # ✅ THEORY QUESTIONS
     if len(user_answer.strip()) < 15:
         return Response({"feedback": "Answer too short. Please explain properly."})
 
@@ -493,18 +496,18 @@ Question: {question.text}
 Answer: {user_answer}"""
 
     try:
-        response = requests.post(
-            "http://localhost:11434/api/generate",
-            json={
-                "model": "mistral",
-                "prompt": prompt,
-                "stream": False
-            }
-        )
-        result = response.json()
-        feedback = result.get("response", "").strip()
+        import os
+        from groq import Groq
 
-        score = 5  # default score agar parse na ho
+        client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+
+        completion = client.chat.completions.create(
+            model="llama3-8b-8192",
+            messages=[{"role": "user", "content": prompt}]
+        )
+        feedback = completion.choices[0].message.content.strip()
+
+        score = 5
         for line in feedback.split("\n"):
             if "Overall Score:" in line:
                 try:
@@ -597,20 +600,20 @@ def analyze_resume(request):
         return Response({"error": "No file uploaded"}, status=400)
 
     try:
-        # ✅ Single source of truth
+        #  Single source of truth
         text = extract_text(file)
     except Exception as e:
         return Response({
             "error": f"File processing failed: {str(e)}"
         }, status=400)
 
-    # ❌ Safety check
+    #  Safety check
     if not text.strip():
         return Response({
             "error": "Could not extract text from resume"
         }, status=400)
 
-    # 🧠 Logic
+    #  Logic
     skills = extract_skills_from_text(text)
     ats_score = calculate_ats_score(text, skills)
 
