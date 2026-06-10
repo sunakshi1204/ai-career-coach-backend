@@ -117,7 +117,7 @@ class Job(models.Model):
 
     experience_level = models.CharField(max_length=50)
 
-    # 🚀 NEW FIELDS
+    # NEW FIELDS
     salary_min = models.IntegerField(null=True, blank=True)
     salary_max = models.IntegerField(null=True, blank=True)
 

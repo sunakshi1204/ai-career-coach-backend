@@ -94,6 +94,7 @@ def home(request):
     </body>
     </html>
     """)
+
 # ================== TEMP USER STORE ==================
 USERS = {}
 
@@ -150,7 +151,6 @@ def get_fields(request):
     return Response(fields)
 
 
-
 @api_view(['GET'])
 def get_categories(request):
     field_id = request.GET.get("field_id")
@@ -161,6 +161,8 @@ def get_categories(request):
         categories = Category.objects.all()
 
     return Response(categories.values("id", "name", "field_id"))
+
+
 @api_view(['GET'])
 def get_topics_by_category(request, category_id):
     topics = Topic.objects.filter(category_id=category_id)
@@ -173,6 +175,7 @@ def get_topics_by_category(request, category_id):
         for t in topics
     ]
     return Response(data)
+
 
 @api_view(['POST'])
 def start_interview_flow(request, field_id, category_id):
@@ -231,11 +234,10 @@ def start_interview_flow(request, field_id, category_id):
             "constraints": q.constraints
         })
 
-    # 🔥 IMPORTANT: return AFTER LOOP
-
     return Response({
         "questions": interview_questions
     })
+
 
 @api_view(["POST"])
 def run_code(request):
@@ -244,31 +246,25 @@ def run_code(request):
 
     if language == "python":
         output = run_python(code)
-
     elif language == "java":
         output = run_java(code)
-
     elif language == "cpp":
         output = run_cpp(code)
-
     elif language == "c":
         output = run_c(code)
-
     elif language == "node":
         output = run_node(code)
-
     elif language == "html":
         output = run_html(code)
-
     elif language == "css":
         output = run_css(code)
-
     else:
         output = "Language not supported"
 
     return Response({
         "output": output
     })
+
 
 @api_view(['POST'])
 def start_interview(request):
@@ -280,20 +276,16 @@ def start_interview(request):
         field_id = request.data.get("field_id")
         category_id = request.data.get("category_id")
 
-        # 🔥 NEW: topics get karo
         topics = request.data.get("topics", [])
 
-        # 🔴 validation
         if not name or not field_id or not category_id:
             return Response({
                 "error": "name, field_id, category_id required"
             }, status=400)
 
-        # 🔥 convert safely
         field_id = int(field_id)
         category_id = int(category_id)
 
-        # 🔥 fetch
         field = Field.objects.filter(id=field_id).first()
         if not field:
             return Response({"error": "Field not found"}, status=404)
@@ -302,12 +294,11 @@ def start_interview(request):
         if not category:
             return Response({"error": "Category not found"}, status=404)
 
-        # 🔥 create session with topics
         session = InterviewSession.objects.create(
             user_name=name,
             field=field,
-            topics=topics, 
-            category=category,  # 🔥 IMPORTANT
+            topics=topics,
+            category=category,
         )
 
         return Response({
@@ -316,9 +307,13 @@ def start_interview(request):
         })
 
     except Exception as e:
+        import traceback
+        print(traceback.format_exc())
         return Response({
             "error": str(e)
         }, status=500)
+
+
 # ================== GET NEXT QUESTION (FLOW BASED) ==================
 @api_view(['POST'])
 def get_next_question(request):
@@ -330,22 +325,18 @@ def get_next_question(request):
 
     step = int(step)
 
-    # if step >= 5:
-    #     return Response({"done": True, "message": "Interview complete!"})
-
     from django.shortcuts import get_object_or_404
     session = get_object_or_404(InterviewSession, id=session_id)
-    
+
     field_id = session.field_id
-    category_id = session.category_id  # 🔥 ye lo session se
+    category_id = session.category_id
 
     session.current_step = step
     session.save()
 
-    # ✅ FIXED: field_id + category_id dono se filter karo
     flow = list(InterviewFlow.objects.filter(
         field_id=field_id,
-        category_id=category_id   # 🔥 ye add kiya
+        category_id=category_id
     ).order_by('step_order'))
 
     if not flow:
@@ -364,18 +355,10 @@ def get_next_question(request):
             "is_coding": False
         })
 
-    # ✅ Category bhi field + category se match karo
-    # category = Category.objects.filter(
-    #     field_id=field_id,
-    #     name__iexact=current_step.category_name
-    # ).first()
-
-    # if not category:
-    #     return Response({"error": f"Category not found: {current_step.category_name}"})
     category = Category.objects.filter(id=category_id).first()
 
     if not category:
-       return Response({"error": f"Category not found"}, status=404)
+        return Response({"error": "Category not found"}, status=404)
 
     same_category_steps = [
         i for i, f in enumerate(flow)
@@ -384,13 +367,11 @@ def get_next_question(request):
 
     position_in_category = same_category_steps.index(step)
 
-    # ✅ Questions sirf usi category ke aayenge
     questions = list(Question.objects.filter(
         category=category
     ).order_by("id"))
 
-    # 🔥 Topic filter bhi lagao agar session mein topics hain
-    topics = session.topics  # list of topic names
+    topics = session.topics
     if topics:
         questions = list(Question.objects.filter(
             category=category,
@@ -415,28 +396,8 @@ def get_next_question(request):
         "constraints": q.constraints if hasattr(q, "constraints") else None
     })
 
-# # ================== SUBMIT ANSWER ==================
-# import requests
 
-# @api_view(['POST'])
-# def submit_answer(request):
-
-#     session_id = request.data.get("session_id")
-#     question_id = request.data.get("question_id")
-#     user_answer = request.data.get("answer")
-
-#     if not session_id or not question_id or not user_answer:
-#         return Response({"error": "Missing data"}, status=400)
-
-#     try:
-#         session = InterviewSession.objects.get(id=session_id)
-#     except InterviewSession.DoesNotExist:
-#         return Response({"error": "Invalid session_id"}, status=404)
-
-#     try:
-#         question = Question.objects.get(id=question_id)
-#     except Question.DoesNotExist:
-#         return Response({"error": "Invalid question_id"}, status=404)
+# ================== SUBMIT ANSWER ==================
 @api_view(['POST'])
 def submit_answer(request):
 
@@ -444,16 +405,32 @@ def submit_answer(request):
     question_id = request.data.get("question_id")
     user_answer = request.data.get("answer")
 
-    if not session_id or not question_id or not user_answer:
+    # ✅ FIX 1: Handle null question_id (FOLLOW_UP questions)
+    if not question_id:
+        return Response({"feedback": "Follow-up answer noted. Moving on."})
+
+    if not session_id or not user_answer:
         return Response({"error": "Missing data"}, status=400)
 
     try:
         session = InterviewSession.objects.get(id=session_id)
-        question = Question.objects.get(id=question_id)
     except InterviewSession.DoesNotExist:
         return Response({"error": "Invalid session_id"}, status=404)
+
+    try:
+        question = Question.objects.get(id=question_id)
     except Question.DoesNotExist:
         return Response({"error": "Invalid question_id"}, status=404)
+
+    # ✅ FIX 2: Prevent duplicate submissions for same session + question
+    already_answered = Answer.objects.filter(
+        session=session,
+        question=question
+    ).exists()
+
+    if already_answered:
+        existing = Answer.objects.filter(session=session, question=question).first()
+        return Response({"feedback": f"Already submitted. Score was: {existing.score}/10"})
 
     # 🔴 CODING QUESTION
     if question.is_coding:
@@ -496,9 +473,6 @@ Question: {question.text}
 Answer: {user_answer}"""
 
     try:
-        import os
-        from groq import Groq
-
         client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
         completion = client.chat.completions.create(
@@ -517,7 +491,19 @@ Answer: {user_answer}"""
                     score = 5
 
     except Exception as e:
-        return Response({"error": str(e)}, status=500)
+        import traceback
+        print(traceback.format_exc())
+        # ✅ FIX 3: Return a proper error response instead of crashing
+        # Save with default score so interview can continue
+        Answer.objects.create(
+            session=session,
+            question=question,
+            answer_text=user_answer,
+            score=5
+        )
+        return Response({
+            "feedback": f"AI evaluation unavailable (check GROQ_API_KEY). Answer saved with default score.\nError: {str(e)}"
+        })
 
     Answer.objects.create(
         session=session,
@@ -545,6 +531,8 @@ Answer: {user_answer}"""
         }
 
     return Response(response_data)
+
+
 # ================== REPORT ==================
 @api_view(['GET'])
 def report(request, session_id):
@@ -571,8 +559,6 @@ def report(request, session_id):
 
 
 # ================== PROFILE ==================
-# Ab
-
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_profile(request):
@@ -592,6 +578,7 @@ def update_profile(request):
     user.save()
     return Response({"message": "Profile updated"})
 
+
 @api_view(['POST'])
 def analyze_resume(request):
     file = request.FILES.get("resume")
@@ -600,20 +587,17 @@ def analyze_resume(request):
         return Response({"error": "No file uploaded"}, status=400)
 
     try:
-        #  Single source of truth
         text = extract_text(file)
     except Exception as e:
         return Response({
             "error": f"File processing failed: {str(e)}"
         }, status=400)
 
-    #  Safety check
     if not text.strip():
         return Response({
             "error": "Could not extract text from resume"
         }, status=400)
 
-    #  Logic
     skills = extract_skills_from_text(text)
     ats_score = calculate_ats_score(text, skills)
 
@@ -625,6 +609,8 @@ def analyze_resume(request):
         "ats_score": ats_score,
         "job_matches": job_matches
     })
+
+
 @api_view(['POST'])
 def improve_resume_api(request):
     resume_text = request.data.get("resume_text")
@@ -634,6 +620,8 @@ def improve_resume_api(request):
     return Response({
         "improved_resume": improved
     })
+
+
 def extract_text(file):
     if file.name.endswith(".pdf"):
         with pdfplumber.open(file) as pdf:
@@ -645,6 +633,8 @@ def extract_text(file):
 
     else:
         return file.read().decode(errors="ignore").lower()
+
+
 @api_view(['POST'])
 def extract_skills(request):
     resume = request.FILES.get("resume")
@@ -652,13 +642,11 @@ def extract_skills(request):
     if not resume:
         return Response({"error": "No file uploaded"}, status=400)
 
-    # ⚠️ Basic text extraction (works for txt mostly)
     try:
-         text = extract_text(resume)
+        text = extract_text(resume)
     except:
         return Response({"error": "Unsupported file format"}, status=400)
 
-    # 🔥 Skill map with variants
     skill_map = {
         "python": ["python"],
         "django": ["django"],
@@ -673,7 +661,6 @@ def extract_skills(request):
 
     found_skills = set()
 
-    # 🔥 Regex matching (accurate)
     for main_skill, variants in skill_map.items():
         for v in variants:
             if re.search(rf"\b{re.escape(v)}\b", text):
@@ -683,6 +670,8 @@ def extract_skills(request):
     return Response({
         "skills": list(found_skills)
     })
+
+
 @api_view(['GET'])
 def get_jobs(request):
     jobs = Job.objects.all()
@@ -696,6 +685,8 @@ def get_jobs(request):
         })
 
     return Response(data)
+
+
 @api_view(['POST'])
 def jobs_match(request):
     user_skills = set(s.lower() for s in request.data.get("skills", []))
@@ -722,7 +713,6 @@ def jobs_match(request):
         if match_score < 30:
             continue
 
-        # ✅ YE LOOP KE ANDAR HONA CHAHIYE
         results.append({
             "id": job.id,
             "title": job.title,
@@ -735,13 +725,14 @@ def jobs_match(request):
             "missing_skills": list(missing),
         })
 
-    # ✅ Ye loop ke baad aayega
     results.sort(key=lambda x: x["match_score"], reverse=True)
 
     return Response({
         "total_matches": len(results),
         "job_matches": results
     })
+
+
 @api_view(['GET'])
 def job_detail(request, id):
     try:
