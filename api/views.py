@@ -216,12 +216,8 @@ def start_interview_flow(request, field_id, category_id):
         if category.name.lower() == "dsa":
             questions = questions.filter(is_coding=True)
 
-        # if questions.exists():
-        #     q = random.choice(questions)
-        if not questions:
-           return Response({"error": "No questions found"}, status=404)
-
-        q = random.choice(questions)
+        if questions.exists():
+            q = random.choice(questions)
 
         interview_questions.append({
             "question_id": q.id,
@@ -374,12 +370,7 @@ def get_next_question(request):
 
     # if not category:
     #     return Response({"error": f"Category not found: {current_step.category_name}"})
-    # category = Category.objects.filter(id=category_id).first()
-    category = Category.objects.filter(
-       field_id=field_id,
-    name__iexact=current_step.category_name
-).first()
-    
+    category = Category.objects.filter(id=category_id).first()
 
     if not category:
        return Response({"error": f"Category not found"}, status=404)
@@ -465,12 +456,16 @@ def submit_answer(request):
     # 🔴 CODING QUESTION - sahi indentation
     if question.is_coding:
         code_lines = len([l for l in user_answer.strip().split('\n') if l.strip()])
-        if user_answer.strip() == "No code submitted" or code_lines == 0:
-            score = 0
-        elif code_lines < 3:
-            score = 3
-        else:
-            score = 6
+    if user_answer.strip() == "No code submitted" or code_lines == 0:
+        score = 0
+    elif code_lines < 3:
+        score = 4
+    elif code_lines < 8:
+        score = 6
+    elif code_lines < 15:
+        score = 8
+    else:
+        score = 9
 
         Answer.objects.create(
             session=session,
