@@ -166,12 +166,18 @@ def get_categories(request):
 @api_view(['GET'])
 def run_seed(request):
     from api.models import Field, Category, InterviewFlow
-    
-    f1 = Field.objects.get(name="Software Engineering")
-    f2 = Field.objects.get(name="Data Science")
-    f3 = Field.objects.get(name="Management (MBA)")
-    f4 = Field.objects.get(name="Cyber Security")
-    f5 = Field.objects.get(name="AI / ML")
+
+    # Duplicate fields delete karo
+    for name in ["Software Engineering", "Data Science", "Management (MBA)", "Cyber Security", "AI / ML"]:
+        fields = Field.objects.filter(name=name)
+        if fields.count() > 1:
+            fields.exclude(pk=fields.first().pk).delete()
+
+    f1 = Field.objects.filter(name="Software Engineering").first()
+    f2 = Field.objects.filter(name="Data Science").first()
+    f3 = Field.objects.filter(name="Management (MBA)").first()
+    f4 = Field.objects.filter(name="Cyber Security").first()
+    f5 = Field.objects.filter(name="AI / ML").first()
 
     Category.objects.get_or_create(name="DSA", field=f1)
     Category.objects.get_or_create(name="Operating System", field=f1)
@@ -191,7 +197,6 @@ def run_seed(request):
     Category.objects.get_or_create(name="Classification", field=f5)
     Category.objects.get_or_create(name="Regression", field=f5)
 
-    # Flows add karo
     if InterviewFlow.objects.count() == 0:
         for field in Field.objects.all():
             for cat in Category.objects.filter(field=field):
