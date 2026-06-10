@@ -21,6 +21,7 @@ urlpatterns = [
     path("jobs-match/", views.jobs_match),
     path('job/<int:id>/', views.job_detail),
     path('delete-web-dev/', views.delete_web_dev),
+    path('run-seed/', views.run_seed),
 
     path('profile/', views.get_profile),
     path('update-profile/', views.update_profile),

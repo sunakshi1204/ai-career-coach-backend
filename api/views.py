@@ -4,6 +4,7 @@ import requests
 import random
 import re
 import os
+
 from groq import Groq
 from unicodedata import category
 
@@ -162,7 +163,47 @@ def get_categories(request):
 
     return Response(categories.values("id", "name", "field_id"))
 
+@api_view(['GET'])
+def run_seed(request):
+    from api.models import Field, Category, InterviewFlow
+    
+    f1 = Field.objects.get(name="Software Engineering")
+    f2 = Field.objects.get(name="Data Science")
+    f3 = Field.objects.get(name="Management (MBA)")
+    f4 = Field.objects.get(name="Cyber Security")
+    f5 = Field.objects.get(name="AI / ML")
 
+    Category.objects.get_or_create(name="DSA", field=f1)
+    Category.objects.get_or_create(name="Operating System", field=f1)
+    Category.objects.get_or_create(name="DBMS", field=f1)
+    Category.objects.get_or_create(name="Backend", field=f1)
+    Category.objects.get_or_create(name="Web Development", field=f1)
+    Category.objects.get_or_create(name="Machine Learning", field=f2)
+    Category.objects.get_or_create(name="Statistics", field=f2)
+    Category.objects.get_or_create(name="Data Analysis", field=f2)
+    Category.objects.get_or_create(name="HR", field=f3)
+    Category.objects.get_or_create(name="Networking", field=f4)
+    Category.objects.get_or_create(name="Ethical Hacking", field=f4)
+    Category.objects.get_or_create(name="Cryptography", field=f4)
+    Category.objects.get_or_create(name="Cyber Laws", field=f4)
+    Category.objects.get_or_create(name="Deep Learning", field=f5)
+    Category.objects.get_or_create(name="Neural Networks", field=f5)
+    Category.objects.get_or_create(name="Classification", field=f5)
+    Category.objects.get_or_create(name="Regression", field=f5)
+
+    # Flows add karo
+    if InterviewFlow.objects.count() == 0:
+        for field in Field.objects.all():
+            for cat in Category.objects.filter(field=field):
+                for i in range(5):
+                    InterviewFlow.objects.create(
+                        field=field,
+                        category=cat,
+                        category_name=cat.name,
+                        step_order=i+1
+                    )
+
+    return Response({"message": "✅ Seed done!"})
 @api_view(['GET'])
 def get_topics_by_category(request, category_id):
     topics = Topic.objects.filter(category_id=category_id)
