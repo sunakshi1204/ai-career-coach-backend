@@ -754,3 +754,7 @@ def job_detail(request, id):
 
     except Job.DoesNotExist:
         return Response({"error": "Job not found"}, status=404)
+@api_view(['GET'])
+def delete_web_dev(request):
+    Field.objects.filter(name="Web Development").delete()
+    return Response({"message": "Deleted!"})
