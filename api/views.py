@@ -4,6 +4,15 @@ import requests
 import random
 import re
 import os
+from .services import (
+    calculate_ats_score,
+    match_jobs,
+    improve_resume,
+    extract_skills_from_text,
+    suggest_career_paths,
+    generate_feedback,
+    extract_education_experience
+)
 
 from groq import Groq
 from unicodedata import category
@@ -877,27 +886,17 @@ def analyze_resume(request):
     jobs = Job.objects.all()
     job_matches = match_jobs(skills, jobs)
 
-    return Response({
-        
-  "ats_score": 82,
-  "skills": ["..."],
-  "job_matches": [...],
-  "career_paths": [
-    { "title": "Frontend Developer", "description": "..." }
-  ],
-  "feedback": {
-    "strengths": ["..."],
-    "weaknesses": ["..."],
-    "improvements": ["..."],
-    "missing_sections": ["Projects", "Certifications", "Achievements"]
-  },
-  "education_experience": {
-    "education": "B.Tech CSE",
-    "experience_years": 1.5,
-    "internship_detected": True,
-    "project_count": 3
-  }
+    career_paths = suggest_career_paths(skills)
+    feedback = generate_feedback(text, skills)
+    education_experience = extract_education_experience(text)
 
+    return Response({
+        "ats_score": ats_score,
+        "skills": skills,
+        "job_matches": job_matches,
+        "career_paths": career_paths,
+        "feedback": feedback,
+        "education_experience": education_experience
     })
 
 
