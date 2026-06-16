@@ -878,9 +878,26 @@ def analyze_resume(request):
     job_matches = match_jobs(skills, jobs)
 
     return Response({
-        "skills": skills,
-        "ats_score": ats_score,
-        "job_matches": job_matches
+        
+  "ats_score": 82,
+  "skills": ["..."],
+  "job_matches": [...],
+  "career_paths": [
+    { "title": "Frontend Developer", "description": "..." }
+  ],
+  "feedback": {
+    "strengths": ["..."],
+    "weaknesses": ["..."],
+    "improvements": ["..."],
+    "missing_sections": ["Projects", "Certifications", "Achievements"]
+  },
+  "education_experience": {
+    "education": "B.Tech CSE",
+    "experience_years": 1.5,
+    "internship_detected": true,
+    "project_count": 3
+  }
+
     })
 
 
