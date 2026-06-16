@@ -3,6 +3,7 @@ from unicodedata import name
 from django.db import models
 from django.utils import timezone
 default=timezone.now
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 #  FIELD (Engineering, MBA, SSB...)
@@ -88,16 +89,37 @@ class InterviewSession(models.Model):
         return f"{self.user_name} - {self.field.name}"
 
 #  ANSWERS (UPDATED)
+# class Answer(models.Model):
+#     session = models.ForeignKey(InterviewSession, on_delete=models.CASCADE)
+#     question = models.ForeignKey(Question, on_delete=models.CASCADE)
+
+#     answer_text = models.TextField(blank=True)   # theory answer
+#     code = models.TextField(blank=True, null=True)  # coding answer
+#     output = models.TextField(blank=True, null=True)  # run result
+
+#     feedback = models.TextField(blank=True)
+#     score = models.FloatField(default=0)
+
 class Answer(models.Model):
     session = models.ForeignKey(InterviewSession, on_delete=models.CASCADE)
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
 
-    answer_text = models.TextField(blank=True)   # theory answer
+    answer_text = models.TextField(blank=True)      # theory answer
     code = models.TextField(blank=True, null=True)  # coding answer
     output = models.TextField(blank=True, null=True)  # run result
 
     feedback = models.TextField(blank=True)
-    score = models.FloatField(default=0)
+    score = models.FloatField(
+        default=0,
+        validators=[MinValueValidator(0), MaxValueValidator(10)]
+    )
+
+    def save(self, *args, **kwargs):
+        # Hard safety net — score kabhi 0-10 range se bahar DB mein save nahi hoga,
+        # chahe view ka clamp miss ho jaaye ya koi aur jagah se bina-clamp score aaye.
+        self.score = max(0, min(10, self.score))
+        super().save(*args, **kwargs)
+    
 class Resume(models.Model):
     name = models.CharField(max_length=100, null=True, blank=True)
     email = models.EmailField(null=True, blank=True)

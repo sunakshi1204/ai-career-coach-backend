@@ -9,7 +9,7 @@ from groq import Groq
 from unicodedata import category
 
 from PyPDF2 import PdfReader
-from isort import file
+# from isort import file
 from .models import Job
 
 from .utils.compiler import run_python, run_java, run_cpp, run_c, run_node, run_html, run_css
@@ -473,6 +473,203 @@ def call_groq(prompt):
         raise Exception(f"Groq error: {data.get('error', {}).get('message', str(data))}")
     
     return data["choices"][0]["message"]["content"].strip()
+# @api_view(['POST'])
+# def submit_answer(request):
+
+#     session_id = request.data.get("session_id")
+#     question_id = request.data.get("question_id")
+#     user_answer = request.data.get("answer")
+
+#     # ✅ FIX 1: Handle null question_id (FOLLOW_UP questions)
+#     if not question_id:
+#         return Response({"feedback": "Follow-up answer noted. Moving on."})
+
+#     if not session_id or not user_answer:
+#         return Response({"error": "Missing data"}, status=400)
+
+#     try:
+#         session = InterviewSession.objects.get(id=session_id)
+#     except InterviewSession.DoesNotExist:
+#         return Response({"error": "Invalid session_id"}, status=404)
+
+#     try:
+#         question = Question.objects.get(id=question_id)
+#     except Question.DoesNotExist:
+#         return Response({"error": "Invalid question_id"}, status=404)
+
+#     # ✅ FIX 2: Prevent duplicate submissions for same session + question
+#     already_answered = Answer.objects.filter(
+#         session=session,
+#         question=question
+#     ).exists()
+
+#     if already_answered:
+#         existing = Answer.objects.filter(session=session, question=question).first()
+#         return Response({"feedback": f"Already submitted. Score was: {existing.score}/10"})
+
+
+
+
+
+
+
+
+
+
+#     # 🔴 CODING QUESTION
+# #     if question.is_coding:
+# #         code_lines = len([l for l in user_answer.strip().split('\n') if l.strip()])
+
+# #         if user_answer.strip() == "No code submitted" or code_lines == 0:
+# #             score = 0
+# #         elif code_lines < 3:
+# #             score = 4
+# #         elif code_lines < 8:
+# #             score = 6
+# #         elif code_lines < 15:
+# #             score = 8
+# #         else:
+# #             score = 9
+
+# #         Answer.objects.create(
+# #             session=session,
+# #             question=question,
+# #             answer_text=user_answer,
+# #             score=score
+# #         )
+# #         return Response({"feedback": f"Code received ({code_lines} lines). Score: {score}/10"})
+
+# #     # ✅ THEORY QUESTIONS
+# #     if len(user_answer.strip()) < 15:
+# #         return Response({"feedback": "Answer too short. Please explain properly."})
+
+# #     prompt = f"""Evaluate this interview answer. Reply ONLY in this exact format, no extra text:
+
+# # Interview Readiness: PASS or FAIL
+# # Correctness: X/5
+# # Concept Understanding: X/3
+# # Communication: X/2
+# # Weak Topics: topic1, topic2
+# # Final Verdict: one line
+# # Overall Score: X/10
+
+# # Question: {question.text}
+# # Answer: {user_answer}"""
+
+# #     try:
+# #         feedback = call_groq(prompt)
+# #         # client = Groq(api_key=os.environ.get(""))
+
+# #         # completion = client.chat.completions.create(
+# #         #     model="llama3-8b-8192",
+# #         #     messages=[{"role": "user", "content": prompt}]
+# #         # )
+# #         # feedback = completion.choices[0].message.content.strip()
+
+# #         score = 5
+# #         for line in feedback.split("\n"):
+# #             if "Overall Score:" in line:
+# #                 try:
+# #                     score = int(line.split(":")[1].strip().split("/")[0].strip())
+# #                     break
+# #                 except:
+# #                     score = 5
+
+# #     except Exception as e:
+# #         import traceback
+# #         print(traceback.format_exc())
+# #         # ✅ FIX 3: Return a proper error response instead of crashing
+# #         # Save with default score so interview can continue
+# #         Answer.objects.create(
+# #             session=session,
+# #             question=question,
+# #             answer_text=user_answer,
+# #             score=5
+# #         )
+# #         return Response({
+# #             "feedback": f"AI evaluation unavailable (check GROQ_API_KEY). Answer saved with default score.\nError: {str(e)}"
+# #         })
+
+
+
+
+
+
+
+
+
+#     if question.is_coding:
+#         code_lines = len([l for l in user_answer.strip().split('\n') if l.strip()])
+
+#     if user_answer.strip() == "No code submitted" or code_lines == 0:
+#         score = 0
+#         feedback = "No code submitted. Score: 0/10"
+#     else:
+#         code_prompt = f"""Evaluate this code answer for correctness and quality. Reply ONLY in this exact format, no extra text:
+
+# Correctness: X/5
+# Code Quality: X/3
+# Efficiency: X/2
+# Overall Score: X/10
+# Final Verdict: one line
+
+# Question: {question.text}
+# Code:
+# {user_answer}"""
+#         try:
+#             feedback = call_groq(code_prompt)
+#             score = 5
+#             for line in feedback.split("\n"):
+#                 if "Overall Score:" in line:
+#                     try:
+#                         score = int(line.split(":")[1].strip().split("/")[0].strip())
+#                         score = max(0, min(10, score))
+#                     except:
+#                         score = 5
+#                     break
+#         except Exception as e:
+#             score = 5
+#             feedback = f"AI evaluation unavailable. Lines: {code_lines}. Default score given.\nError: {str(e)}"
+
+#         score = max(0, min(10, score))  # 🔴 clamp — Step 4 isi se related hai
+
+#     Answer.objects.create(
+#         session=session,
+#         question=question,
+#         answer_text=user_answer,
+#         score=score
+#     )
+#     return Response({"feedback": feedback})
+
+#     Answer.objects.create(
+#         session=session,
+#         question=question,
+#         answer_text=user_answer,
+#         score=score
+#     )
+
+#     total_answers = Answer.objects.filter(session=session).count()
+#     response_data = {"feedback": feedback}
+
+#     if total_answers >= 5:
+#         answers = Answer.objects.filter(session=session)
+#         total_score = sum([a.score for a in answers])
+#         avg = round(total_score / answers.count(), 2)
+
+#         strengths = [a.question.text for a in answers if a.score >= 7]
+#         weaknesses = [a.question.text for a in answers if a.score < 7]
+
+#         response_data["analysis"] = {
+#             "total_questions": answers.count(),
+#             "average_score": avg,
+#             "strengths": strengths,
+#             "weaknesses": weaknesses
+#         }
+
+#     return Response(response_data)
+
+
+
 @api_view(['POST'])
 def submit_answer(request):
 
@@ -480,7 +677,6 @@ def submit_answer(request):
     question_id = request.data.get("question_id")
     user_answer = request.data.get("answer")
 
-    # ✅ FIX 1: Handle null question_id (FOLLOW_UP questions)
     if not question_id:
         return Response({"feedback": "Follow-up answer noted. Moving on."})
 
@@ -497,12 +693,7 @@ def submit_answer(request):
     except Question.DoesNotExist:
         return Response({"error": "Invalid question_id"}, status=404)
 
-    # ✅ FIX 2: Prevent duplicate submissions for same session + question
-    already_answered = Answer.objects.filter(
-        session=session,
-        question=question
-    ).exists()
-
+    already_answered = Answer.objects.filter(session=session, question=question).exists()
     if already_answered:
         existing = Answer.objects.filter(session=session, question=question).first()
         return Response({"feedback": f"Already submitted. Score was: {existing.score}/10"})
@@ -513,28 +704,52 @@ def submit_answer(request):
 
         if user_answer.strip() == "No code submitted" or code_lines == 0:
             score = 0
-        elif code_lines < 3:
-            score = 4
-        elif code_lines < 8:
-            score = 6
-        elif code_lines < 15:
-            score = 8
+            feedback = "No code submitted. Score: 0/10"
         else:
-            score = 9
+            code_prompt = f"""You are a strict technical interviewer evaluating a candidate's code submission.
 
-        Answer.objects.create(
-            session=session,
-            question=question,
-            answer_text=user_answer,
-            score=score
-        )
-        return Response({"feedback": f"Code received ({code_lines} lines). Score: {score}/10"})
+If the submitted text is not valid, meaningful code in any programming language (e.g. random characters, keyboard mashing, or text unrelated to code), you MUST respond with:
+Correctness: 0/5
+Code Quality: 0/3
+Efficiency: 0/2
+Overall Score: 0/10
+Final Verdict: No valid code was submitted.
 
-    # ✅ THEORY QUESTIONS
-    if len(user_answer.strip()) < 15:
-        return Response({"feedback": "Answer too short. Please explain properly."})
+Otherwise, evaluate the code normally for correctness against the question, code quality, and efficiency.
 
-    prompt = f"""Evaluate this interview answer. Reply ONLY in this exact format, no extra text:
+Reply ONLY in this exact format, no extra text:
+
+Correctness: X/5
+Code Quality: X/3
+Efficiency: X/2
+Overall Score: X/10
+Final Verdict: one line
+
+Question: {question.text}
+Code:
+{user_answer}"""
+            try:
+                feedback = call_groq(code_prompt)
+                score = 5
+                for line in feedback.split("\n"):
+                    if "Overall Score:" in line:
+                        try:
+                            score = int(line.split(":")[1].strip().split("/")[0].strip())
+                        except:
+                            score = 5
+                        break
+            except Exception as e:
+                score = 5
+                feedback = f"AI evaluation unavailable. Lines: {code_lines}. Default score given.\nError: {str(e)}"
+
+            score = max(0, min(10, score))
+
+    # ✅ THEORY QUESTION
+    else:
+        if len(user_answer.strip()) < 15:
+            return Response({"feedback": "Answer too short. Please explain properly."})
+
+        prompt = f"""Evaluate this interview answer. Reply ONLY in this exact format, no extra text:
 
 Interview Readiness: PASS or FAIL
 Correctness: X/5
@@ -547,40 +762,23 @@ Overall Score: X/10
 Question: {question.text}
 Answer: {user_answer}"""
 
-    try:
-        feedback = call_groq(prompt)
-        # client = Groq(api_key=os.environ.get(""))
-
-        # completion = client.chat.completions.create(
-        #     model="llama3-8b-8192",
-        #     messages=[{"role": "user", "content": prompt}]
-        # )
-        # feedback = completion.choices[0].message.content.strip()
-
-        score = 5
-        for line in feedback.split("\n"):
-            if "Overall Score:" in line:
-                try:
-                    score = int(line.split(":")[1].strip().split("/")[0].strip())
+        try:
+            feedback = call_groq(prompt)
+            score = 5
+            for line in feedback.split("\n"):
+                if "Overall Score:" in line:
+                    try:
+                        score = int(line.split(":")[1].strip().split("/")[0].strip())
+                    except:
+                        score = 5
                     break
-                except:
-                    score = 5
+        except Exception as e:
+            score = 5
+            feedback = f"AI evaluation unavailable (check GROQ_API_KEY). Answer saved with default score.\nError: {str(e)}"
 
-    except Exception as e:
-        import traceback
-        print(traceback.format_exc())
-        # ✅ FIX 3: Return a proper error response instead of crashing
-        # Save with default score so interview can continue
-        Answer.objects.create(
-            session=session,
-            question=question,
-            answer_text=user_answer,
-            score=5
-        )
-        return Response({
-            "feedback": f"AI evaluation unavailable (check GROQ_API_KEY). Answer saved with default score.\nError: {str(e)}"
-        })
+        score = max(0, min(10, score))
 
+    # ✅ SAVE — common for both paths, ek hi baar
     Answer.objects.create(
         session=session,
         question=question,
@@ -607,7 +805,6 @@ Answer: {user_answer}"""
         }
 
     return Response(response_data)
-
 
 # ================== REPORT ==================
 @api_view(['GET'])
