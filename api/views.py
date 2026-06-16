@@ -706,16 +706,16 @@ def submit_answer(request):
             score = 0
             feedback = "No code submitted. Score: 0/10"
         else:
-            code_prompt = f"""You are a strict technical interviewer evaluating a candidate's code submission.
+            code_prompt = f"""You are a technical interviewer evaluating a candidate's code submission.
 
-If the submitted text is not valid, meaningful code in any programming language (e.g. random characters, keyboard mashing, or text unrelated to code), you MUST respond with:
+STEP 1: Check if this is actual code. If it is random characters, keyboard mashing, or text with absolutely no programming syntax (no variables, no keywords, no structure of any language), respond with:
 Correctness: 0/5
 Code Quality: 0/3
 Efficiency: 0/2
 Overall Score: 0/10
 Final Verdict: No valid code was submitted.
 
-Otherwise, evaluate the code normally for correctness against the question, code quality, and efficiency.
+STEP 2: Otherwise, this IS real code — even if it's incomplete, buggy, or doesn't fully solve the problem. In that case, evaluate it normally and give partial credit based on how close the logic is to a correct solution. Do NOT use the "No valid code" verdict just because the solution is unfinished or wrong — only use it for genuine gibberish.
 
 Reply ONLY in this exact format, no extra text:
 
