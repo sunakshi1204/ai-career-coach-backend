@@ -894,7 +894,7 @@ def analyze_resume(request):
   "education_experience": {
     "education": "B.Tech CSE",
     "experience_years": 1.5,
-    "internship_detected": true,
+    "internship_detected": True,
     "project_count": 3
   }
 
